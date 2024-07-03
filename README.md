@@ -1,7 +1,5 @@
 Personnes lié au projet :
-Emilien LEROUY
-Yann KOUAM
-Bilal ZERDANI
+Emilien LEROUY / Yann KOUAM / Bilal ZERDANI
 
 Pour lancer le projet, vous devez taper la commande suivante :
 
