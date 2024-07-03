@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!--========== HEADER ==========-->
+<header class="l-header" id="header">
+    <nav class="nav bd-container">
+        <a href="{% url 'home' %}" class="nav__logo">ICAMiam</a>
+        <a href="{% url 'panier' %}" class="nav__logo">Panier 
+            {% if user.panier %}
+                [{{ user.panier.total_items }}]
+            {% endif %}
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="{% url 'home' %}" class="nav__link">Accueil</a></li>
+                <li class="nav__item"><a href="{% url 'event' %}" class="nav__link">Événements</a></li>
+                <li class="nav__item"><a href="{% url 'menu' %}" class="nav__link active-link">Menu</a></li>
+                <li class="nav__item"><a href="{% url 'logout' %}" class="nav__link">Déconnexion</a></li>
+                <li><i class='bx bx-toggle-left change-theme' id="theme-button"></i></li>
+            </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+            <i class='bx bx-grid-alt'></i>
+        </div>
+    </nav>
+</header>
+
+<section class="menu">
+    <div class="container">
+        <h2>Notre Menu</h2>
+        <div class="accessory__container bd-grid"> 
+            {% for product in products %}
+            <div class="accessory__content" data-url="{% url 'add_to_cart' product.id %}">
+                {% if product.image %}
+                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="accessory__image">
+                {% endif %}
+                <h3 class="accessory__title">{{ product.name }}</h3>
+                <p class="accessory__description">{{ product.description }}</p>
+                <span class="accessory__price">{{ product.price }}€</span>
+                <a href="{% url 'add_to_cart' product.id %}" class="button accessory__button">
+                    <i class='bx bx-cart'></i>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.accessory__content').forEach(function(element) {
+            element.addEventListener('click', function() {
+                window.location.href = this.getAttribute('data-url');
+            });
+        });
+    });
+</script>
+
+{% endblock %}

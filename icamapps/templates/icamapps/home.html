@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock %}
+{% block content %}
+<!--========== HEADER ==========-->
+<header class="l-header" id="header">
+    <nav class="nav bd-container">
+        <a href="{% url 'home' %}" class="nav__logo">ICAMiam</a>
+        <a href="{% url 'panier' %}" class="nav__logo">Panier 
+            {% if user.panier %}
+                [{{ user.panier.total_items }}]
+            {% endif %}
+        </a>
+        
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">             
+                <li class="nav__item"><a href="{% url 'home' %}" class="nav__link active-link">Accueil</a></li>
+                <li class="nav__item"><a href="{% url 'event' %}" class="nav__link">Evenements</a></li>
+                <li class="nav__item"><a href="{% url 'menu' %}" class="nav__link">Menu</a></li>
+                <li class="nav__item"><a href="{% url 'logout' %}" class="nav__link">Déconnexion</a></li>
+                
+
+                <li><i class='bx bx-toggle-left change-theme' id="theme-button"></i></li>
+            </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+            <i class='bx bx-grid-alt'></i>
+        </div>
+    </nav>
+</header>
+
+<!-- ========== HOME ========== -->
+<section class="home" id="home">
+    <div class="home__container bd-container bd-grid">
+        <div class="home__img">
+            <img src="{% static "img/sandwich_home.png" %}" alt="">
+        </div>
+
+        <div class="home__data">
+            <h1 class="home__title">Bienvenue sur ICAMiam !</h1>
+            <p class="home__description">Commande ton repas dès maintenant !</p>
+            <a href="{% url 'menu' %}" class="nav__link, button">Menu</a>
+        </div>   
+    </div>
+</section>
+
+<!-- ========== Evenements ========== -->
+<section class="home" id="home">
+    <div class="home__container bd-container bd-grid">
+        <div class="specials__data">
+            <h2 class="section-title-center">Evenements</h2>
+            <p class="home__description">Quels evenements sont présents à la caffeteria en ce moment ?</p>
+            <a href="{% url 'event' %}" class="nav__link, button">VOIR</a>
+        </div>
+
+        <div class="specials__img">
+            <!--<img src="{% static 'specials.png' %}" alt=""> -->
+        </div>
+    </div>
+</section>
+
+<!-- Ajoutez d'autres sections ici -->
+
+{% endblock %}
+{% block footer%}
+
+    <!--========== FOOTER ==========-->
+    <footer class="footer section">
+        <div class="footer__container bd-container bd-grid">
+            <div class="footer__content">
+                <h3 class="footer__title">
+                    <a href="#" class="footer__logo">ICAMiam</a>
+                </h3>
+                <p class="footer__description">L'Appli de réservation</p>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Les Services</h3>
+                <ul>
+                    <li><a href="#" class="footer__link">Menu</a></li>
+                    <li><a href="#" class="footer__link">Evenements</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Contact</h3>
+                <ul>
+                    <li>Email: icamiam@gmail.com</li>
+                    <li>Phone: +33 207 300</li>
+                    <li>Address: 2, rue de Madrid, Schiltigheim</li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Suis Nous !</h3>
+                <a href="#" class="footer__social"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://www.instagram.com/bde_atlanticam/" class="footer__social"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+            </div>
+        </div>
+
+        <p class="footer__copy">&#169; 2024 ICAMiam. Droits Réservés</p>
+    </footer>
+
+{% endblock %}
+
+
+

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+<!--========== HEADER ==========-->
+<header class="l-header" id="header">
+    <nav class="nav bd-container">
+        <a href="{% url 'home' %}" class="nav__logo">ICAMiam</a>
+        <a href="{% url 'panier' %}" class="nav__logo">Panier 
+            {% if user.panier %}
+                [{{ user.panier.total_items }}]
+            {% endif %}
+        </a>
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="{% url 'home' %}" class="nav__link">Accueil</a></li>
+                <li class="nav__item"><a href="{% url 'event' %}" class="nav__link active-link">Evenements</a></li>
+                <li class="nav__item"><a href="{% url 'menu' %}" class="nav__link">Menu</a></li>
+                <li class="nav__item"><a href="{% url 'logout' %}" class="nav__link">Déconnexion</a></li>
+                <li><i class='bx bx-toggle-left change-theme' id="theme-button"></i></li>
+            </ul>
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+            <i class='bx bx-grid-alt'></i>
+        </div>
+    </nav>
+</header>
+
+<!--========== SECTION DES EVENEMENTS ==========-->
+<section class="decoration section bd-container" id="decoration">
+    <h2 class="section-title">Les Evenements à venir</h2>
+    <div class="event-items decoration__container">
+        {% for event in events %}
+        <div class="event-item decoration__data">
+            <h3 class="decoration__title">{{ event.title }}</h3>
+            <p>{{ event.description }}</p>
+            <p>Date: {{ event.date }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

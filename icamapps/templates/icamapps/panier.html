@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!--========== HEADER ==========-->
+<header class="l-header" id="header">
+    <nav class="nav bd-container">
+        <a href="{% url 'home' %}" class="nav__logo">ICAMiam</a>
+        <a href="{% url 'panier' %}" class="nav__logo">Panier 
+            {% if user.panier %}
+                [{{ user.panier.total_items }}]
+            {% endif %}
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">             
+                <li class="nav__item"><a href="{% url 'home' %}" class="nav__link">Accueil</a></li>
+                <li class="nav__item"><a href="{% url 'event' %}" class="nav__link">Evenements</a></li>
+                <li class="nav__item"><a href="{% url 'menu' %}" class="nav__link">Menu</a></li>
+                <li class="nav__item"><a href="{% url 'logout' %}" class="nav__link">Déconnexion</a></li>
+                <li><i class='bx bx-toggle-left change-theme' id="theme-button" aria-label="Changer le thème"></i></li>
+            </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+            <i class='bx bx-grid-alt' aria-label="Menu de navigation"></i>
+        </div>
+    </nav>
+</header>
+<!--========== Panier ==========-->
+<section class="send section">
+    <div class="send__container bd-container bd-grid">
+        <!-- Section pour le compte connecté -->
+        <div class="send__account">
+            <h2 class="section-title-center send__title">Compte Connecté : {% if user.is_authenticated %}
+                {{user.username}}
+            {% endif %} !</h2>
+            <p class="send__description">Est-ce bien ton compte ?</p>
+        </div>
+
+        <!-- Section pour le panier -->
+        <div class="send__cart">
+            <h2 class="section-title-center send__title">Mon Panier</h2>
+
+            {% if user.is_authenticated and user.panier.orders.exists %}
+                <div class="send__items">
+                    <ul>
+                        {% for order in user.panier.orders.all %}
+                            <li class="send-item">
+                                <span>{{ order.product.name }} - Quantité: {{ order.quantity }}</span>
+                                <form action="{% url 'remove_from_cart' order.id %}" method="post" class="send-item__form">
+                                    {% csrf_token %}
+                                    <button type="submit" class="button__trash" aria-label="Supprimer {{ order.product.name }}">
+                                        <i class='bx bx-trash'></i>
+                                    </button>
+                                </form>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="send__footer">
+                    <a href="{% url 'confirmation' product_id=user.panier.orders.first.product.id %}" class="connection__button">Valide ton Panier !</a>
+                </div>
+            {% else %}
+                <span class="connection__button">Oups ! Le panier est vide ...</span>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block footer %}
+<!--========== FOOTER ==========-->
+<footer class="footer section">
+    <div class="footer__container bd-container bd-grid">
+        <div class="footer__content">
+            <h3 class="footer__title">
+                <a href="{% url 'home' %}" class="footer__logo">ICAMiam</a>
+            </h3>
+            <p class="footer__description">L'Appli de réservation</p>
+        </div>
+
+        <div class="footer__content">
+            <h3 class="footer__title">Les Services</h3>
+            <ul>
+                <li><a href="{% url 'menu' %}" class="footer__link">Menu</a></li>
+                <li><a href="{% url 'event' %}" class="footer__link">Evenements</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__content">
+            <h3 class="footer__title">Contact</h3>
+            <ul>
+                <li>Email: <a href="mailto:icamiam@gmail.com" class="footer__link">icamiam@gmail.com</a></li>
+                <li>Phone: +33 207 300</li>
+                <li>Address: 2, rue de Madrid, Schiltigheim</li>
+            </ul>
+        </div>
+
+        <div class="footer__content">
+            <h3 class="footer__title">Suis Nous !</h3>
+            <a href="https://www.facebook.com/ICAMiam" class="footer__social" aria-label="Facebook"><i class='bx bxl-facebook-circle'></i></a>
+            <a href="https://www.instagram.com/bde_atlanticam/" class="footer__social" aria-label="Instagram"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="https://twitter.com/ICAMiam" class="footer__social" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+        </div>
+    </div>
+
+    <p class="footer__copy">&#169; 2024 ICAMiam. Droits Réservés</p>
+</footer>
+{% endblock %}

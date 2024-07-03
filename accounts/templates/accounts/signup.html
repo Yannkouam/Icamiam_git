@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block identification %}
+    <section class="send section">
+        <div class="send__container bd-container bd-grid">
+            <h1 class="send__title">S'inscrire</h1>
+            <form method="POST" class="form-fields">
+                {% csrf_token %}
+                <div class="send__direction">   
+                    <label for="username" class="form-label">Nom d'utilisateur :</label>
+                    <input type="text" id="username" name="username" class="form-input" required>
+                </div>
+                <div class="send__direction">
+                    <label for="password" class="form-label">Mot de passe :</label>
+                    <input type="password" id="password" name="password" class="form-input" required>
+                </div>
+                <a href="{% url 'index' %}" class="connection__button">Retour</a>
+                <button type="submit" class="connection__button">S'inscrire</button>
+            </form>
+            
+            
+          
+         
+        </div>
+    </section>
+    
+    
+{% endblock %}

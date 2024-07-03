@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block identification %}
+<section class="send section">
+    <div class="send__container bd-container bd-grid">
+        <div class="send__header">
+            <h2 class="section-title-center send__title">Bienvenue sur ICAMiam</h2>
+            <p class="send__description">Veuillez vous connecter à votre compte</p>
+
+            {% if user.is_authenticated %}
+                <p class="send__description">Connecté en tant que {{ user.username }}</p>
+                <a href="{% url 'logout' %}" class="connection__button">Déconnexion</a>
+                
+                <a href="{% url 'home' %}" class="connection__button">Continuer</a>
+            {% else %}
+                <form action="{% url 'login' %}" method="post" class="form-fields">
+                    {% csrf_token %}
+                    <div class="send__direction">
+                        <label for="username" class="form-label">Nom d'utilisateur :</label>
+                        <input type="text" id="username" name="username" class="form-input" required>
+                    </div>
+                    <div class="send__direction">
+                        <label for="password" class="form-label">Mot de passe :</label>
+                        <input type="password" id="password" name="password" class="form-input" required>
+                    </div>
+                    <button type="submit" class="connection__button" style="margin-bottom: 20px;">Se connecter</button>
+                </form>
+                
+                <p class="send__description">Vous n'avez pas de compte ?  <a href="{% url 'signup' %}" class="link">S'inscrire</a></p>
+             
+            {% endif %}
+        </div>
+        <div class="send__img">
+            <img src="{% static 'img/login.jpg' %}" alt="Image description" class="send__image">
+        </div>
+        
+    </div>
+</section>
+{% endblock %}
