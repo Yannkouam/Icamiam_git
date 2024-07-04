@@ -145,6 +145,25 @@ L'administration du modèle `Order` est personnalisée à l'aide de la classe `O
   - **list_filter** : Ajoute des filtres pour les champs `ordered` et `product`, facilitant la recherche de commandes spécifiques.
   - **ordering** : Définit l'ordre de tri par défaut des commandes, avec les commandes les plus récentes en premier (`-ordered`).
 
+# 📝 Formulaires (`forms.py`)
+
+Le fichier `forms.py` contient les définitions des formulaires utilisés pour la saisie et la validation des données dans l'application `icamapps`.
+
+## Formulaires disponibles
+
+### `CreateNewlist`
+
+Le formulaire `CreateNewlist` est utilisé pour collecter des informations lorsqu'un nouvel utilisateur souhaite s'inscrire à un service spécifique de l'application.
+
+- **Champs :**
+  - `Prenom` : Champ de texte pour le prénom de l'utilisateur.
+  - `Nom` : Champ de texte pour le nom de l'utilisateur.
+  - `Email` : Champ de texte pour l'adresse email de l'utilisateur, avec validation automatique de format.
+
+#### Utilisation typique :
+
+Ce formulaire est utilisé lors du processus d'inscription ou de création de compte utilisateur dans l'application. Il garantit que les informations essentielles comme le prénom, le nom et l'email sont saisies correctement.
+
 ## 🖼️ Templates
 Les templates HTML se trouvent dans les répertoires `templates` respectifs de chaque application. Ils définissent l'interface utilisateur pour les différentes fonctionnalités du site.
 
