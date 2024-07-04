@@ -119,7 +119,31 @@ py manage.py runserver "votre_ip":80
 - **add_to_cart (icamapps/views.py)** : Vue pour ajouter un produit au panier de l'utilisateur.
 - **remove_from_cart (icamapps/views.py)** : Vue pour supprimer un article du panier de l'utilisateur.
 - **confirmation (icamapps/views.py)** : Vue pour confirmer une commande d'un produit spécifique.
+  
+# ⚙️ Administration (admin.py)
 
+Le fichier `admin.py` configure l'interface d'administration de Django pour gérer les modèles de l'application `icamapps`. Cela permet aux administrateurs de visualiser, ajouter, modifier et supprimer des enregistrements de modèles directement depuis l'interface d'administration.
+
+## Modèles enregistrés
+
+- **Product**
+  - Enregistrement du modèle `Product` dans l'administration Django. Les administrateurs peuvent gérer les produits disponibles à la cafétéria.
+
+- **Event**
+  - Enregistrement du modèle `Event` dans l'administration Django. Les administrateurs peuvent gérer les événements organisés par la cafétéria.
+
+- **Panier**
+  - Enregistrement du modèle `Panier` dans l'administration Django. Les administrateurs peuvent gérer les paniers des utilisateurs.
+
+## Configuration personnalisée de l'administration pour le modèle `Order`
+
+L'administration du modèle `Order` est personnalisée à l'aide de la classe `OrderAdmin`. Cette personnalisation permet de contrôler l'affichage et les fonctionnalités de gestion des commandes dans l'interface d'administration.
+
+- **OrderAdmin**
+  - **list_display** : Affiche les champs `order_number`, `user`, `product`, `quantity`, et `ordered` dans la liste des commandes.
+  - **search_fields** : Permet de rechercher des commandes en utilisant `order_number`, `user__username`, et `product__name`.
+  - **list_filter** : Ajoute des filtres pour les champs `ordered` et `product`, facilitant la recherche de commandes spécifiques.
+  - **ordering** : Définit l'ordre de tri par défaut des commandes, avec les commandes les plus récentes en premier (`-ordered`).
 
 ## 🖼️ Templates
 Les templates HTML se trouvent dans les répertoires `templates` respectifs de chaque application. Ils définissent l'interface utilisateur pour les différentes fonctionnalités du site.
