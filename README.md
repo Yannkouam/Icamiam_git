@@ -28,6 +28,6 @@ Pour consulter le document technique du projet ICAMIAM, veuillez cliquer.[ici](D
 
 # 👥 Personnes liées au projet 
 
-Emilien LEROUY / Yann KOUAM /Bilal ZERDANI
+Emilien LEROUY / Yann KOUAM / Bilal ZERDANI
 
 
