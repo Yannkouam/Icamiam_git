@@ -92,27 +92,27 @@ py manage.py runserver "votre_ip":80
 - Démarrez le serveur de développement : `python manage.py runserver`.
 - Accédez à l'application via `http://127.0.0.1:8000/`.
 
-## Points Clés des Modèles et Vues
+## 🔑 Points Clés des Modèles et Vues
 
-### Modèles (models.py)
+### 🏗️ Modèles (models.py)
 - **User (accounts/models.py)**
-  - Modèle pour gérer les informations des utilisateurs.
+- Modèle pour gérer les informations des utilisateurs.
 - **Product (icamapps/models.py)**
-  - Modèle pour les produits disponibles à la cafétéria.
+- Modèle pour les produits disponibles à la cafétéria.
 - **Reservation (icamapps/models.py)**
-  - Modèle pour gérer les réservations des utilisateurs.
+- Modèle pour gérer les réservations des utilisateurs.
 
-### Vues (views.py)
+### 👁️ Vues (views.py)
 - **Accounts Views (accounts/views.py)**
-  - Vues pour l'authentification et la gestion des profils utilisateurs.
+- Vues pour l'authentification et la gestion des profils utilisateurs.
 - **Reservation Views (icamapps/views.py)**
-  - Vues pour la création, la gestion et la visualisation des réservations.
+- Vues pour la création, la gestion et la visualisation des réservations.
 
-## Templates
+## 🖼️ Templates
 Les templates HTML se trouvent dans les répertoires `templates` respectifs de chaque application. Ils définissent l'interface utilisateur pour les différentes fonctionnalités du site.
 
-## Tests
+## 🧪 Tests
 Les tests sont définis dans les fichiers `tests.py` de chaque application. Ils permettent de vérifier le bon fonctionnement des différentes fonctionnalités de l'application.
 
-## Conclusion
+## 🏁 Conclusion
 Ce document fournit une vue d'ensemble de la structure et de la configuration du projet ICAMIAM. Pour une documentation plus détaillée, veuillez vous référer aux fichiers de code et aux commentaires inclus dans chaque fichier.
