@@ -81,17 +81,6 @@ py manage.py runserver "votre_ip":80
 ```
 4. Entrez votre adresse IP dans la barre d'URL de votre navigateur mobile pour accéder au site.
 
-### Configuration de la Base de Données
-- Configurez la base de données dans le fichier `settings.py`.
-- Appliquez les migrations : `python manage.py migrate`.
-
-### Création de Superutilisateur
-- Créez un superutilisateur pour accéder à l'interface d'administration : `python manage.py createsuperuser`.
-
-### Démarrage du Serveur
-- Démarrez le serveur de développement : `python manage.py runserver`.
-- Accédez à l'application via `http://127.0.0.1:8000/`.
-
 ## 🔑 Points Clés des Modèles et Vues
 
 ### 🏗️ Modèles (models.py)
