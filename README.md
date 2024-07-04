@@ -24,7 +24,7 @@ py manage.py runserver "votre_ip":80
 
 ## 📄 Document technique
 
-Pour consulter le document technique du projet ICAMIAM, veuillez cliquer.[ici](Document-technique).
+Pour consulter le document technique du projet ICAMIAM, veuillez cliquer.[ici](Document-technique.md).
 
 # 👥 Personnes liées au projet 
 
