@@ -24,7 +24,7 @@ py manage.py runserver "votre_ip":80
 5. 
 ## 📖 Guide utilisateur
 
-Pour consulter le guide utilisateur du projet ICAMIAM, veuillez cliquer [ici](Guide-utilisateur.pdf).
+Pour consulter le guide utilisateur du projet ICAMIAM, veuillez cliquer [ici](Guide_utilisateur.pdf).
 
 ## 📄 Document technique
 
