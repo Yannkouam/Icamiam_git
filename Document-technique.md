@@ -57,8 +57,8 @@ Le projet est organisé en plusieurs applications Django comme suit :
   - `img/` : Contient les images utilisées dans l'application.
   - `js/` : Contient les fichiers JavaScript pour l'interactivité de l'application.
 
-### Dossier "templates"
-- **Objectif :** Contient les templates HTML globaux utilisés par l'application.
+## 🖼️ Templates
+Les templates HTML se trouvent dans les répertoires `templates` respectifs de chaque application. Ils définissent l'interface utilisateur pour les différentes fonctionnalités du site.
 
 ## 🛠️ Instructions pour le Déploiement
 
@@ -163,9 +163,6 @@ Le formulaire `CreateNewlist` est utilisé pour collecter des informations lorsq
 #### Utilisation typique :
 
 Ce formulaire est utilisé lors du processus d'inscription ou de création de compte utilisateur dans l'application. Il garantit que les informations essentielles comme le prénom, le nom et l'email sont saisies correctement.
-
-## 🖼️ Templates
-Les templates HTML se trouvent dans les répertoires `templates` respectifs de chaque application. Ils définissent l'interface utilisateur pour les différentes fonctionnalités du site.
 
 ## 🧪 Tests
 Les tests sont définis dans les fichiers `tests.py` de chaque application. Ils permettent de vérifier le bon fonctionnement des différentes fonctionnalités de l'application.
