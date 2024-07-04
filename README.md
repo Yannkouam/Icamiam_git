@@ -1,13 +1,29 @@
-Personnes lié au projet :
-Emilien LEROUY / Yann KOUAM / Bilal ZERDANI
+# 🎉 Projet ICAMIAM 🎉
 
-Pour lancer le projet, vous devez taper la commande suivante :
+## 🚀 Lancement du projet
 
+Pour lancer le projet, exécutez la commande suivante dans votre terminal :
+
+```
 py manage.py runserver 127.0.0.1:80
-Après avoir tapé cette commande dans le terminal, vous pouvez ouvrir un navigateur internet et entrer dans la barre d'URL : 127.0.0.1 ou icamiam.fr.
+```
+Ensuite, ouvrez votre navigateur et entrez l'une des URL suivantes :
 
-Si vous souhaitez vous connecter au site avec votre téléphone, vous devez aller dans le fichier settings.py et ajouter votre adresse IP actuelle. 
-Ensuite, une fois ce changement effectué, tapez dans le terminal :
+127.0.0.1
+icamiam.fr
+## 📱 Connexion via téléphone
+Pour accéder au site depuis votre téléphone, suivez les étapes ci-dessous :
 
+1. Ouvrez le fichier settings.py.
+2. Ajoutez votre adresse IP actuelle à la liste des IP autorisées.
+3. Dans le terminal, exécutez la commande :
+```
 py manage.py runserver "votre_ip":80
-De la même manière, si vous tapez votre adresse IP dans la barre d'URL, cela vous connectera au site.
+```
+4. Entrez votre adresse IP dans la barre d'URL de votre navigateur mobile pour accéder au site.
+
+# 👥 Personnes liées au projet 
+
+Emilien LEROUY / Yann KOUAM /Bilal ZERDANI
+
+
