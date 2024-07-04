@@ -3,6 +3,12 @@
 ## Objectif du Projet
 Le projet ICAMIAM est une application web développée avec Django, dont le but est de permettre aux utilisateurs de commander et de réserver des produits à la cafétéria de l'école.
 
+## Fonctionnalités Principales
+- Commander des produits.
+- Réserver des produits.
+- Voir les éléments disponibles.
+- Accessible sur téléphone.
+
 ## Structure du Projet
 Le projet est organisé en plusieurs applications Django comme suit :
 
@@ -45,6 +51,28 @@ Le projet est organisé en plusieurs applications Django comme suit :
 ### Configuration de l'Environnement
 - Installez Python (version 3.x).
 - Installez Django : `pip install django`.
+  
+## 🚀 Lancement du projet
+
+Pour lancer le projet, exécutez la commande suivante dans votre terminal :
+
+```
+py manage.py runserver 127.0.0.1:80
+```
+Ensuite, ouvrez votre navigateur et entrez l'une des URL suivantes :
+
+127.0.0.1
+icamiam.fr
+## 📱 Connexion via téléphone
+Pour accéder au site depuis votre téléphone, suivez les étapes ci-dessous :
+
+1. Ouvrez le fichier settings.py.
+2. Ajoutez votre adresse IP actuelle à la liste des IP autorisées.
+3. Dans le terminal, exécutez la commande :
+```
+py manage.py runserver "votre_ip":80
+```
+4. Entrez votre adresse IP dans la barre d'URL de votre navigateur mobile pour accéder au site.
 
 ### Configuration de la Base de Données
 - Configurez la base de données dans le fichier `settings.py`.
