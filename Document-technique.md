@@ -70,8 +70,9 @@ Le projet est organisé en plusieurs applications Django comme suit :
 - Configurez la base de données dans le fichier `settings.py`.
 - Appliquez les migrations : `python manage.py migrate`.
 
-### 🔐 Création de Superutilisateur
+### 🔐 Création de Superutilisateur et gérer les comptes sur l'interface administrateur
 - Créez un superutilisateur pour accéder à l'interface d'administration : `python manage.py createsuperuser`.
+- Pour créer une classe avec des accès sur Django il faut créer utilisateur puis dans django admin lui attribuer des accès. 
   
 ## 🚀 Lancement du projet
 
