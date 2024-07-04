@@ -103,5 +103,5 @@ Les templates HTML se trouvent dans les répertoires `templates` respectifs de c
 ## 🧪 Tests
 Les tests sont définis dans les fichiers `tests.py` de chaque application. Ils permettent de vérifier le bon fonctionnement des différentes fonctionnalités de l'application.
 
-## 🏁 Conclusion
-Ce document fournit une vue d'ensemble de la structure et de la configuration du projet ICAMIAM. Pour une documentation plus détaillée, veuillez vous référer aux fichiers de code et aux commentaires inclus dans chaque fichier.
+## 🏁 Finalité
+Le document fournit une vue d'ensemble de la structure et de la configuration du projet ICAMIAM. Pour une documentation plus détaillée, veuillez vous référer aux fichiers de code et aux commentaires inclus dans chaque fichier.
