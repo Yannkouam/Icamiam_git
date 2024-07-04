@@ -106,10 +106,19 @@ py manage.py runserver "votre_ip":80
 - **Panier (icamapps/models.py)** : Modèle pour gérer le panier des utilisateurs.
 - **Confirmation (icamapps/models.py)** : Modèle pour gérer les confirmations de commande.
 
-
 ### 👁️ Vues (views.py)
-- **Accounts Views (accounts/views.py)** : Vues pour l'authentification et la gestion des profils utilisateurs.
-- **Reservation Views (icamapps/views.py)** : Vues pour la création, la gestion et la visualisation des réservations.
+- **signup (accounts/views.py)** : Vue pour la page d'inscription des utilisateurs, permettant de créer un nouveau compte utilisateur.
+- **logout_user (accounts/views.py)** : Vue pour déconnecter l'utilisateur actuel.
+- **login_user (accounts/views.py)** : Vue pour la page de connexion des utilisateurs, permettant de s'authentifier et de se connecter.
+- **home (icamapps/views.py)** : Vue pour la page d'accueil affichant les événements, les éléments du menu et les informations de contact.
+- **menu (icamapps/views.py)** : Vue pour la page du menu affichant tous les produits disponibles.
+- **event (icamapps/views.py)** : Vue pour la page des événements affichant tous les événements.
+- **panier (icamapps/views.py)** : Vue pour la page du panier permettant de gérer les articles ajoutés par l'utilisateur.
+- **index (icamapps/views.py)** : Vue pour la page d'index.
+- **add_to_cart (icamapps/views.py)** : Vue pour ajouter un produit au panier de l'utilisateur.
+- **remove_from_cart (icamapps/views.py)** : Vue pour supprimer un article du panier de l'utilisateur.
+- **confirmation (icamapps/views.py)** : Vue pour confirmer une commande d'un produit spécifique.
+
 
 ## 🖼️ Templates
 Les templates HTML se trouvent dans les répertoires `templates` respectifs de chaque application. Ils définissent l'interface utilisateur pour les différentes fonctionnalités du site.
