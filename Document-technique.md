@@ -98,9 +98,14 @@ py manage.py runserver "votre_ip":80
 ## 🔑 Points Clés des Modèles et Vues
 
 ### 🏗️ Modèles (models.py)
-- **User (accounts/models.py)** : Modèle pour gérer les informations des utilisateurs.
 - **Product (icamapps/models.py)** : Modèle pour les produits disponibles à la cafétéria.
-- **Reservation (icamapps/models.py)** : Modèle pour gérer les réservations des utilisateurs.
+- **Event (icamapps/models.py)** : Modèle pour les événements organisés par la cafétéria.
+- **MenuItem (icamapps/models.py)** : Modèle pour les éléments du menu de la cafétéria.
+- **Contact (icamapps/models.py)** : Modèle pour les informations de contact de la cafétéria.
+- **Order (icamapps/models.py)** : Modèle pour les commandes passées par les utilisateurs.
+- **Panier (icamapps/models.py)** : Modèle pour gérer le panier des utilisateurs.
+- **Confirmation (icamapps/models.py)** : Modèle pour gérer les confirmations de commande.
+
 
 ### 👁️ Vues (views.py)
 - **Accounts Views (accounts/views.py)** : Vues pour l'authentification et la gestion des profils utilisateurs.
