@@ -22,6 +22,10 @@ py manage.py runserver "votre_ip":80
 ```
 4. Entrez votre adresse IP dans la barre d'URL de votre navigateur mobile pour accéder au site.
 
+## 📄 Document technique
+
+Pour consulter le document technique du projet ICAMIAM, veuillez cliquer [ici](lien_vers_le_document_technique).
+
 # 👥 Personnes liées au projet 
 
 Emilien LEROUY / Yann KOUAM /Bilal ZERDANI
