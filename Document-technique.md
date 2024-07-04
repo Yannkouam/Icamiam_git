@@ -46,6 +46,20 @@ Le projet est organisé en plusieurs applications Django comme suit :
   - `urls.py` : Définit les routes URL pour l'application.
   - `wsgi.py` : Fichier de configuration pour le serveur WSGI.
 
+### Dossier "media"
+- **Objectif :** Contient les fichiers médias téléchargés par les utilisateurs.
+
+### Dossier "static"
+- **Objectif :** Contient les fichiers statiques utilisés dans le projet (CSS, JavaScript, images).
+- **Sous-dossiers :**
+  - `admin/` : Contient les fichiers statiques spécifiques à l'administration Django.
+  - `css/` : Contient les fichiers CSS pour le style de l'application.
+  - `img/` : Contient les images utilisées dans l'application.
+  - `js/` : Contient les fichiers JavaScript pour l'interactivité de l'application.
+
+### Dossier "templates"
+- **Objectif :** Contient les templates HTML globaux utilisés par l'application.
+
 ## 🛠️ Instructions pour le Déploiement
 
 ### 🐍 Configuration de l'Environnement
@@ -84,18 +98,13 @@ py manage.py runserver "votre_ip":80
 ## 🔑 Points Clés des Modèles et Vues
 
 ### 🏗️ Modèles (models.py)
-- **User (accounts/models.py)**
-- Modèle pour gérer les informations des utilisateurs.
-- **Product (icamapps/models.py)**
-- Modèle pour les produits disponibles à la cafétéria.
-- **Reservation (icamapps/models.py)**
-- Modèle pour gérer les réservations des utilisateurs.
+- **User (accounts/models.py)** : Modèle pour gérer les informations des utilisateurs.
+- **Product (icamapps/models.py)** : Modèle pour les produits disponibles à la cafétéria.
+- **Reservation (icamapps/models.py)** : Modèle pour gérer les réservations des utilisateurs.
 
 ### 👁️ Vues (views.py)
-- **Accounts Views (accounts/views.py)**
-- Vues pour l'authentification et la gestion des profils utilisateurs.
-- **Reservation Views (icamapps/views.py)**
-- Vues pour la création, la gestion et la visualisation des réservations.
+- **Accounts Views (accounts/views.py)** : Vues pour l'authentification et la gestion des profils utilisateurs.
+- **Reservation Views (icamapps/views.py)** : Vues pour la création, la gestion et la visualisation des réservations.
 
 ## 🖼️ Templates
 Les templates HTML se trouvent dans les répertoires `templates` respectifs de chaque application. Ils définissent l'interface utilisateur pour les différentes fonctionnalités du site.
@@ -105,3 +114,11 @@ Les tests sont définis dans les fichiers `tests.py` de chaque application. Ils 
 
 ## 🏁 Finalité
 Le document fournit une vue d'ensemble de la structure et de la configuration du projet ICAMIAM. Pour une documentation plus détaillée, veuillez vous référer aux fichiers de code et aux commentaires inclus dans chaque fichier.
+
+
+
+
+
+
+
+
