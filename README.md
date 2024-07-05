@@ -21,7 +21,7 @@ Pour accéder au site depuis votre téléphone, suivez les étapes ci-dessous :
 py manage.py runserver "votre_ip":80
 ```
 4. Entrez votre adresse IP dans la barre d'URL de votre navigateur mobile pour accéder au site.
-5. 
+
 ## 📖 Guide utilisateur
 
 Pour consulter le guide utilisateur du projet ICAMIAM, veuillez cliquer [ici](Guide_utilisateur.pdf).
