@@ -8,6 +8,7 @@ Le projet ICAMIAM est une application web développée avec Django, dont le but 
 - 📅 Réserver des produits.
 - 👀 Voir les éléments disponibles.
 - 📱 Accessible sur téléphone.
+-  Voir les événements à venir 
 
 ## 🗂 Structure du Projet
 Le projet est organisé en plusieurs applications Django comme suit :
